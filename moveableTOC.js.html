@@ -1,0 +1,27 @@
+
+    function MoveableTOC(e){
+	
+	var toc = document.getElementById("main");
+	var offset = window.innerWidth * 0.3;
+	
+	//TODO: move TOC to the adjusted scrolled amount
+	if(e.pageX < (offset * 0.3) && e.pageY < (offset * 0.3)){
+		toc.style.left = "20px";
+	}
+	else if(e.pageX > offset) {
+		toc.style.left = "-" + offset + "px";
+	}
+	
+}
+
+function init(e){
+    // set table of contents off the page
+    var toc = document.getElementById("main");
+    var offset = window.innerWidth * 0.3;
+    
+    toc.style.left = "-" + offset + "px";
+    
+}
+
+window.onload = init;
+window.onmousemove = MoveableTOC;

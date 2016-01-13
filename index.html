@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ThomdabeasT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<script type="text/javascript">
+  function changeContent(e){
+    // deactivate all others
+    for (var i = e.parentNode.children.length - 1; i >= 0; i--) {
+      e.parentNode.children[i].className = "";
+    }
+    // set as active
+    e.className = "selected";
+
+    console.log(e.innerText.trim() == 'Projects');
+    var c = document.getElementById('content');
+    // change the embed's source
+    if(e.innerText.trim() == 'Home')
+    {
+      c.innerHTML = "<embed height='900px' width='100%' src='home.html'></embed>";
+    }
+    else if (e.innerText.trim() == 'Projects') {
+      c.innerHTML = "<embed height='900px' width='100%' src='projects.html'></embed>";
+    }
+    else if (e.innerText.trim() == 'About Me') {
+      c.innerHTML = "<embed height='900px' width='100%' src='about.html'></embed>";
+    }
+    else if (e.innerText.trim() == 'Contact') {
+      c.innerHTML = "<embed height='900px' width='100%' src='contact.html'></embed>";
+    }
+  }
+</script>
+</head>
+
+
+
+<body style="background-color: #FAFAFA; background-image: url('assets/camo.png')">
+
+    <ul id="nbcontainer" class="navbar">
+      <li class="selected"><a onmousedown="changeContent(this)">Home</a></li>
+      <li><a onmousedown="changeContent(this)">Projects</a></li>
+      <li><a onmousedown="changeContent(this)">About Me</a></li>
+      <li><a onmousedown="changeContent(this)">Contact</a></li>
+      <ul style="float: right;"><li><div class="header">Thom Hemenway <small>ThomdabeasT</small></div></li></ul>
+    </ul>
+
+    <div id="content" style="height: 900px; margin: auto; position: relative; top: 60px; background-color: #333; border: 3px solid #0AFF0A; width: 96%">
+      <embed id="holder"  height="900px" width="96%" src="home.html">
+    </div>
+</body>
+</html>

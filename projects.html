@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<script type="text/javascript">
+    function openURL(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+</script>
+</head>
+<body style="background-color: #333" onload="console.log(parent.height);">
+<div class="fakeButton blog">
+    <div class="blog-heading">
+        <h3>This Website</h3>
+    </div>
+    <div class="blog-body">
+        I made this website with (of course) HTML, CSS, and javascript. It's currently being hosted on Google Drive and given a redirect URL through dot.tk.
+    </div>
+</div>
+
+<div class="fakeButton blog" onclick="openURL('https://www.github.com/thomdabeast/StockScraper')">
+    <div class="blog-heading">
+        <h3>Stock Scraper</h3>
+    </div>
+    <div class="blog-body">
+        Using Python, I made a web scraper to get ticker prices from finance.yahoo.com and then output to a csv file where it is displayed on a chart.
+    </div>
+</div>
+
+<div class="fakeButton blog" onclick="openURL('https://www.github.com/thomdabeast/')">
+    <div class="blog-heading">
+        <h3>RSS Map</h3>
+    </div>
+    <div class="blog-body">
+        C# and WPF application to subscribe to RSS feeds and display them on 3 different interfaces one using the Bing Maps control.
+    </div>
+</div>
+<div class="fakeButton blog" onclick="game()">
+    <div class="blog-heading">
+        <h3>Bubble Game<small style="font-size: 10px">(Click to play below! Use WASD to move your bubble.)</small></h3>
+    </div>
+    <div class="blog-body">
+        A javascript game where the objective is to consume other bubbles and expand your radius. You loose health at the same time so there's a chance a health pack will appear! Note: there are bugs where the collision between health packs don't work and others. If the game stops and it doesn't say you die, you've won! (Just haven't had time to change it.)
+    </div>
+</div>
+</body>
+</html>
